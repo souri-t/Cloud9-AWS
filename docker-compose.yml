@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+    cloud9-aws:
+        build: .
+        image: saitas/alpine-cloud9
+        container_name: cloud9-aws
+        volumes:
+            - ./workspace:/workspace
+        environment:
+            USERNAME: user
+            PASSWORD: pass
+        ports:
+            - "8080:8080"
