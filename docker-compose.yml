@@ -6,6 +6,7 @@ services:
         container_name: cloud9-aws
         volumes:
             - ./workspace:/workspace
+            - ./aws:/root/.aws
         environment:
             USERNAME: user
             PASSWORD: pass
